@@ -16,7 +16,7 @@ class Formatter {
       if (i == 0) {
       result.push(this.capitalize(stringArray[i]))
     } else {
-      if (exceptions.include(stringArray[i])) {
+      if (exceptions.includes(stringArray[i])) {
         result.push(this.capitalize(string[i]))
       } else {
         result.push(this.capitalize(string[i]))
