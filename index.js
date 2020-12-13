@@ -10,10 +10,19 @@ class Formatter {
 
   static titleize(string) {
     exceptions = ['the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from']
-    string = string.toLowerCase().split(' ');
+    let result = []
+    stringArray = string.split(' ');
     for (let i = 0; i < string.length; i++) {
-      string[i] = string[i].charAt(0).toUpperCase() + string[i].slice(1);
+      if (i == 0) {
+      result.push(this.capitalize(stringArray[i]))
+    } else {
+      if (exceptions.include(stringArray[i])) {
+        result.push(this.capitalize(string[i]))
+      } else {
+        result.push(this.capitalize(string[i]))
+      }
     }
-    return string.join(' ')
+    }
+    return result.join(' ')
   }
 }
