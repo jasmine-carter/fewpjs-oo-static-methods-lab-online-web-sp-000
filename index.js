@@ -12,7 +12,7 @@ class Formatter {
     let exceptions = ['the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from']
     let result = []
     let stringArray = string.split(' ');
-    for (let i = 0; i < string.length; i++) {
+    for (let i = 0; i < stringArray.length; i++) {
       if (i == 0) {
       result.push(this.capitalize(stringArray[i]))
     } else {
